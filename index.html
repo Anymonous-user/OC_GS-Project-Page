@@ -9,32 +9,15 @@
   <meta name="theme-color" content="#111827">
   <meta property="og:title" content="OC-GS: Object-Centric Representation-Demand Alignment for Immersive 3D Gaussian Streaming">
   <meta property="og:description" content="An object-centric streaming substrate with stability-governed online delivery for immersive 3D Gaussian Streaming.">
-  <meta property="og:image" content="static/images/teaser.png">
+  <meta property="og:image" content="./static/images/teaser.png">
   <meta property="og:type" content="website">
   <title>OC-GS | Object-Centric Gaussian Streaming</title>
-  <script>
-    (function () {
-      var path = window.location.pathname;
-      var last = path.substring(path.lastIndexOf("/") + 1);
-      var basePath;
-
-      if (path.endsWith("/")) {
-        basePath = path;
-      } else if (last && last.indexOf(".") !== -1) {
-        basePath = path.slice(0, path.lastIndexOf("/") + 1);
-      } else {
-        basePath = path + "/";
-      }
-
-      document.write('<base href="' + basePath.replace(/"/g, "&quot;") + '">');
-    })();
-  </script>
-  <link rel="icon" type="image/png" href="static/images/icon.png">
-  <link rel="apple-touch-icon" href="static/images/icon.png">
+  <link rel="icon" type="image/png" href="./static/images/icon.png">
+  <link rel="apple-touch-icon" href="./static/images/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="./static/css/index.css?v=20260409-2">
 </head>
 <body>
   <button class="scroll-to-top" type="button" aria-label="Scroll to top">↑</button>
@@ -64,8 +47,8 @@
           </p>
 
           <div class="hero-actions">
-            <a class="button button--primary" href="static/pdf/main.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
-            <a class="button button--secondary" href="static/pdf/supplementary.pdf" target="_blank" rel="noopener noreferrer">Supplementary</a>
+            <a class="button button--primary" href="./static/pdf/main.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+            <a class="button button--secondary" href="./static/pdf/supplementary.pdf" target="_blank" rel="noopener noreferrer">Supplementary</a>
             <span class="button button--ghost" aria-disabled="true">Code release pending</span>
           </div>
 
@@ -186,7 +169,7 @@
       <div class="container motivation-grid">
         <article class="attention-panel">
           <div class="attention-stage" role="img" aria-label="Attention heatmap over a scene with highlighted object masks">
-            <img src="static/images/attention_scene.png" alt="Scene with highlighted attended object">
+            <img src="./static/images/attention_scene.png" alt="Scene with highlighted attended object">
             <span class="attention-spot attention-spot--primary"></span>
             <span class="attention-spot attention-spot--secondary"></span>
             <span class="attention-spot attention-spot--tertiary"></span>
@@ -211,7 +194,7 @@
         </article>
 
         <article class="figure-card">
-          <img src="static/images/motivation_controls.png" alt="Motivation control figure showing top-k attention concentration, ratio to uniform, consistency, and mask sensitivity">
+          <img src="./static/images/motivation_controls.png" alt="Motivation control figure showing top-k attention concentration, ratio to uniform, consistency, and mask sensitivity">
           <p class="figure-note">
             Four diagnostic views support the same claim: concentration over top objects is consistently above uniform, the effect is binocularly stable, and the conclusion is robust to mask-threshold changes.
           </p>
@@ -283,7 +266,7 @@
       </div>
 
       <div class="container overview-frame">
-        <img src="static/images/overview.png" alt="OC-GS overview showing semantic-saliency distillation, hybrid scene assets, and online scheduling">
+        <img src="./static/images/overview.png" alt="OC-GS overview showing semantic-saliency distillation, hybrid scene assets, and online scheduling">
       </div>
     </section>
 
@@ -427,19 +410,19 @@
 
         <div class="chart-grid">
           <article class="chart-card">
-            <img src="static/images/Bandwidth_Robustness.png" alt="Bandwidth robustness comparison">
+            <img src="./static/images/Bandwidth_Robustness.png" alt="Bandwidth robustness comparison">
             <p>OC-GS preserves its advantage across bandwidth regimes instead of collapsing once the budget tightens.</p>
           </article>
           <article class="chart-card">
-            <img src="static/images/FDE.png" alt="FDE comparison">
+            <img src="./static/images/FDE.png" alt="FDE comparison">
             <p>The predictor estimates demand in object space, which improves where the system spends the next transmission step.</p>
           </article>
           <article class="chart-card">
-            <img src="static/images/Recovery_Rate.png" alt="Recovery rate comparison">
+            <img src="./static/images/Recovery_Rate.png" alt="Recovery rate comparison">
             <p>Event-aligned recovery curves show that OC-GS reaches usable attended quality much earlier after a gaze shift.</p>
           </article>
           <article class="chart-card">
-            <img src="static/images/Temporal_Stability.png" alt="Temporal stability comparison">
+            <img src="./static/images/Temporal_Stability.png" alt="Temporal stability comparison">
             <p>Lyapunov-governed scheduling reduces long-session churn rather than merely winning isolated recovery events.</p>
           </article>
         </div>
@@ -468,12 +451,12 @@
 
         <div class="qualitative-gallery">
           <article class="qualitative-figure">
-            <img src="static/images/Qualitative.png" alt="Main qualitative comparison across methods at a fixed 50 milliseconds after a gaze or saccade shift">
+            <img src="./static/images/Qualitative.png" alt="Main qualitative comparison across methods at a fixed 50 milliseconds after a gaze or saccade shift">
             <p class="figure-note">Main-paper qualitative snapshot: the same event, the same budget, and the same fixed 50 ms view after gaze or saccade shift.</p>
           </article>
 
           <article class="qualitative-figure">
-            <img src="static/images/more_Qualitative.png" alt="Additional qualitative comparison with more scenes and method pairs under the same early-recovery setting">
+            <img src="./static/images/more_Qualitative.png" alt="Additional qualitative comparison with more scenes and method pairs under the same early-recovery setting">
             <p class="figure-note">Expanded qualitative comparison under the same early-recovery setting, adding more scenes and method pairs without changing the event-aligned protocol.</p>
           </article>
         </div>
@@ -660,6 +643,6 @@ cold_start_added@20Mbps      = 2.7 s</pre>
     </div>
   </footer>
 
-  <script src="static/js/index.js"></script>
+  <script src="./static/js/index.js?v=20260409-2"></script>
 </body>
 </html>
