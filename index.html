@@ -1,295 +1,648 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<!-- Primary Meta Tags -->
-<!-- TODO: Replace with your paper title and author names -->
-<meta content="OC-GS: Object-Centric Representation--Demand Alignment for Immersive 3D Gaussian Streaming" name="title"/>
-<!-- TODO: Write a compelling 150-160 character description of your research -->
-<meta content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS" name="description"/>
-<!-- TODO: Add 5-10 relevant keywords for your research area -->
-<meta content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI" name="keywords"/>
-<!-- TODO: List all authors -->
-<meta content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME" name="author"/>
-<meta content="index, follow" name="robots"/>
-<meta content="English" name="language"/>
-<!-- Open Graph / Facebook -->
-<meta content="article" property="og:type"/>
-<!-- TODO: Replace with your institution or lab name -->
-<meta content="INSTITUTION_OR_LAB_NAME" property="og:site_name"/>
-<!-- TODO: Same as paper title above -->
-<meta content="OC-GS: Object-Centric Representation--Demand Alignment for Immersive 3D Gaussian Streaming" property="og:title"/>
-<!-- TODO: Same as description above -->
-<meta content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS" property="og:description"/>
-<!-- TODO: Replace with your actual website URL -->
-<meta content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE" property="og:url"/>
-<!-- TODO: Create a 1200x630px preview image and update path -->
-<meta content="https://YOUR_DOMAIN.com/static/images/social_preview.png" property="og:image"/>
-<meta content="1200" property="og:image:width"/>
-<meta content="630" property="og:image:height"/>
-<meta content="PAPER_TITLE - Research Preview" property="og:image:alt"/>
-<meta content="2024-01-01T00:00:00.000Z" property="article:published_time"/>
-<meta content="FIRST_AUTHOR_NAME" property="article:author"/>
-<meta content="Research" property="article:section"/>
-<meta content="KEYWORD1" property="article:tag"/>
-<meta content="KEYWORD2" property="article:tag"/>
-<!-- Twitter -->
-<meta content="summary_large_image" name="twitter:card"/>
-<!-- TODO: Replace with your lab/institution Twitter handle -->
-<meta content="@YOUR_TWITTER_HANDLE" name="twitter:site"/>
-<!-- TODO: Replace with first author's Twitter handle -->
-<meta content="@AUTHOR_TWITTER_HANDLE" name="twitter:creator"/>
-<!-- TODO: Same as paper title above -->
-<meta content="OC-GS: Object-Centric Representation--Demand Alignment for Immersive 3D Gaussian Streaming" name="twitter:title"/>
-<!-- TODO: Same as description above -->
-<meta content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS" name="twitter:description"/>
-<!-- TODO: Same as social preview image above -->
-<meta content="https://YOUR_DOMAIN.com/static/images/social_preview.png" name="twitter:image"/>
-<meta content="PAPER_TITLE - Research Preview" name="twitter:image:alt"/>
-<!-- Academic/Research Specific -->
-<meta content="PAPER_TITLE" name="citation_title"/>
-<meta content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST" name="citation_author"/>
-<meta content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST" name="citation_author"/>
-<meta content="2024" name="citation_publication_date"/>
-<meta content="CONFERENCE_NAME" name="citation_conference_title"/>
-<meta content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf" name="citation_pdf_url"/>
-<!-- Additional SEO -->
-<meta content="#2563eb" name="theme-color"/>
-<meta content="#2563eb" name="msapplication-TileColor"/>
-<meta content="yes" name="apple-mobile-web-app-capable"/>
-<meta content="default" name="apple-mobile-web-app-status-bar-style"/>
-<!-- Preconnect for performance -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://ajax.googleapis.com" rel="preconnect"/>
-<link href="https://documentcloud.adobe.com" rel="preconnect"/>
-<link href="https://cdn.jsdelivr.net" rel="preconnect"/>
-<!-- TODO: Replace with your paper title and authors -->
-<title>OC-GS: Object-Centric Representation--Demand Alignment for Immersive 3D Gaussian Streaming</title>
-<!-- Favicon and App Icons -->
-<!-- Critical CSS - Load synchronously -->
-<link href="static/css/bulma.min.css" rel="stylesheet"/>
-<link href="static/css/index.css" rel="stylesheet"/>
-<!-- Non-critical CSS - Load asynchronously -->
-<link as="style" href="static/css/bulma-carousel.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
-<link as="style" href="static/css/bulma-slider.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
-<link as="style" href="static/css/fontawesome.all.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
-<link as="style" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
-<!-- Fallback for browsers that don't support preload -->
-<noscript>
-<link href="static/css/bulma-carousel.min.css" rel="stylesheet"/>
-<link href="static/css/bulma-slider.min.css" rel="stylesheet"/>
-<link href="static/css/fontawesome.all.min.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet"/>
-</noscript>
-<!-- Fonts - Optimized loading -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Defer non-critical JavaScript -->
-<script defer="" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script defer="" src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-<script defer="" src="static/js/fontawesome.all.min.js"></script>
-<script defer="" src="static/js/bulma-carousel.min.js"></script>
-<script defer="" src="static/js/bulma-slider.min.js"></script>
-<script defer="" src="static/js/index.js"></script>
-<!-- Structured Data for Academic Papers -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-<!-- Website/Organization Structured Data -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com","sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OC-GS realigns immersive 3D Gaussian streaming around semantic objects, reducing recovery latency and refetch while improving attended quality under constrained bandwidth.">
+  <meta name="keywords" content="3D Gaussian Splatting, immersive streaming, object-centric streaming, gaze prediction, Lyapunov scheduling, ACM Multimedia">
+  <meta name="author" content="Anonymous ACM Multimedia 2026 Submission">
+  <meta name="theme-color" content="#111827">
+  <meta property="og:title" content="OC-GS: Object-Centric Representation-Demand Alignment for Immersive 3D Gaussian Streaming">
+  <meta property="og:description" content="An object-centric streaming substrate with stability-governed online delivery for immersive 3D Gaussian Streaming.">
+  <meta property="og:image" content="static/images/teaser.png">
+  <meta property="og:type" content="website">
+  <title>OC-GS | Object-Centric Gaussian Streaming</title>
+  <link rel="icon" type="image/png" href="static/images/icon.png">
+  <link rel="apple-touch-icon" href="static/images/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/index.css">
 </head>
 <body>
-<!-- Scroll to Top Button -->
-<button aria-label="Scroll to top" class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top">
-<i class="fas fa-chevron-up"></i>
-</button>
-<!-- More Works Dropdown -->
-<main id="main-content">
-<section class="hero">
-<div class="hero-body">
-<div class="container is-max-desktop">
-<div class="columns is-centered">
-<div class="column has-text-centered">
-<!-- TODO: Replace with your paper title -->
-<h1 class="title is-1 publication-title">OC-GS: Object-Centric Representation--Demand Alignment for Immersive 3D Gaussian Streaming</h1>
-<div class="is-size-5 publication-authors"><span class="author-block">Anonymous ACM Author</span></div>
-<div class="column has-text-centered">
-<div class="publication-links">
-<span class="link-block">
-<a class="external-link button is-normal is-rounded is-dark" href="static/pdf/main.pdf" target="_blank">
-<span class="icon"><i class="fas fa-file-pdf"></i></span>
-<span>Paper</span>
-</a>
-</span>
-<span class="link-block">
-<a class="external-link button is-normal is-rounded is-dark" href="static/pdf/Supplementary.pdf" target="_blank">
-<span class="icon"><i class="fas fa-file-pdf"></i></span>
-<span>Supplementary</span>
-</a>
-</span>
-<span class="link-block">
-<a class="external-link button is-normal is-rounded is-dark" href="#">
-<span class="icon"><i class="fab fa-github"></i></span>
-<span>Code (coming soon)</span>
-</a>
-</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Teaser video-->
-<section class="hero teaser">
-<div class="container is-max-desktop">
-<div class="hero-body">
-<!-- TODO: Replace with your teaser video -->
-<video autoplay="" controls="" height="100%" id="tree" loop="" muted="" poster="" preload="metadata">
-<!-- TODO: Add your video file path here -->
-<source src="" type="video/mp4"/>
-</video>
-<!-- TODO: Replace with your video description -->
-<h2 class="subtitle has-text-centered">Video Result</h2>
-</div>
-</div>
-</section>
-<!-- End teaser video -->
-<!-- Paper abstract -->
-<section class="section">
-<div class="container is-max-widescreen">
-<div class="columns is-centered has-text-centered">
-<div class="column is-full">
-<img alt="Teaser" src="static/images/teaser.png" style="width: 100%; margin-top: 20px;"/>
-<h2 class="subtitle has-text-centered" style="margin-top: 15px; font-size: 1.1rem; text-align: justify !important;">
-<strong>Teaser:</strong> Illustration of our Object-Centric Gaussian Streaming (OC-GS) approach compared to traditional spatial-based streaming techniques. By aligning representations with semantic demands, we preserve high-fidelity rendering for attended objects even under constrained network bandwidth.
-        </h2>
-</div>
-</div>
-</div>
-</section>
-<section class="section hero is-light">
-<div class="container is-max-desktop">
-<div class="columns is-centered has-text-centered">
-<div class="column is-four-fifths">
-<h2 class="title is-3">Abstract</h2>
-<div class="content has-text-justified">
-<!-- TODO: Replace with your paper abstract -->
-<p>3D Gaussian Splatting (3DGS) has emerged as the definitive representation for next-generation immersive media, yet its practical delivery over resource-constrained networks remains fundamentally unresolved. We argue that this is not merely a bandwidth or compression challenge, but a <strong>representation--demand alignment</strong> problem: existing systems organize transmission around spatial proximity, while user attention in immersive environments is organized around semantic objects---producing a structural mismatch at the representation, prediction, and control levels that cannot be resolved by bandwidth alone.</p>
-<p>To correct this alignment failure, we present <strong>OC-GS</strong> (Object-Centric Gaussian Streaming), a two-stage alignment framework built around an <em>object-addressable streaming substrate</em>. <strong>Stage 1 (Representation Realignment):</strong> A Semantic-Saliency Co-distillation pipeline transforms raw Gaussians into an object-addressable substrate, elevating semantics from a passive scene attribute to an active <em>semantic utility</em> signal for resource allocation. A Hybrid Granularity architecture preserves spatial octrees for the macro-environment while packaging high-value entities as atomic micro-object bundles, fully decoupling semantic targets from their geometric context. <strong>Stage 2 (Stability-Governed Delivery):</strong> An object-grounded probabilistic predictor fuses physical kinematics, visual geometry, and a fixation-token intention prior to produce an object-level demand distribution, which feeds a Lyapunov-based solver that provides provable stability guarantees under coupled bandwidth and buffer constraints---achieving <em>stability-governed</em> streaming with churn suppression by design. Extensive evaluations on eye-tracked 6DoF traces demonstrate that OC-GS reduces redundant transmission by [XX]% and improves Foveated-PSNR by [XX] dB compared to state-of-the-art spatial-adaptive baselines, while achieving near-zero refetch ratios under realistic 5G network conditions.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="section">
-<div class="container is-max-widescreen">
-<div class="columns is-centered has-text-centered">
-<div class="column is-full">
-<h2 class="title is-3">Method Overview</h2>
-<img alt="Method Overview" src="static/images/overview.png" style="width: 100%; margin-top: 20px;"/><p style="text-align: justify; margin-top: 15px; margin-bottom: 20px; font-size: 1rem;"><strong>Method Overview:</strong> Our framework consists of a Semantic-Saliency Co-distillation pipeline for Representation Realignment (Stage 1) and a Lyapunov-based solver for Stability-Governed Delivery (Stage 2).</p>
-<h2 class="title is-3" style="margin-top: 60px;">Results</h2>
-<img alt="Results" src="static/images/result.png" style="width: 100%; margin-top: 20px;"/><p style="text-align: justify; margin-top: 15px; margin-bottom: 20px; font-size: 1rem;"><strong>Qualitative Results:</strong> Visual comparison under constrained network conditions. OC-GS effectively allocates bandwidth to semantically salient objects, avoiding severe detail degradation in high-value areas compared to baselines.</p>
-<h2 class="title is-3" style="margin-top: 60px;">Quantitative Analysis</h2>
-<div class="columns is-centered has-text-centered" style="margin-top: 20px;">
-<div class="column is-3">
-<img alt="Bandwidth Robustness" src="static/images/Bandwidth_Robustness.png" style="width: 100%;"/>
-<p class="subtitle is-6" style="margin-top: 10px;">Bandwidth Robustness</p>
-</div>
-<div class="column is-3">
-<img alt="FDE" src="static/images/FDE.png" style="width: 100%;"/>
-<p class="subtitle is-6" style="margin-top: 10px;">Foveated-PSNR (FDE) Evaluation</p>
-</div>
-<div class="column is-3">
-<img alt="Rate-Distortion Curve" src="static/images/R-D-Curve.png" style="width: 100%;"/>
-<p class="subtitle is-6" style="margin-top: 10px;">Rate-Distortion (R-D) Performance</p>
-</div>
-<div class="column is-3">
-<img alt="Temporal Stability" src="static/images/Temporal_Stability.png" style="width: 100%;"/>
-<p class="subtitle is-6" style="margin-top: 10px;">Temporal Stability &amp; Churn Suppression</p>
-</div>
-</div>
-<p style="text-align: justify; margin-top: 15px;">
-  Extensive evaluations demonstrate that our framework maintains provable stability, mitigates temporal churn, and consistently outperforms spatial-adaptive baselines across various bandwidth conditions.
-</p>
-</div>
-</div>
-</div>
-</section>
-<!-- End paper abstract -->
-<!-- Image carousel -->
-<!-- End image carousel -->
-<!-- Youtube video -->
-<!-- End youtube video -->
-<!-- Video carousel -->
-<!-- End video carousel -->
-<!-- Paper poster -->
-<!--End paper poster -->
-<!--BibTex citation -->
-<!--End BibTex citation -->
-<!-- Statcounter tracking code -->
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-<!-- End of Statcounter Code -->
-</main></body>
+  <button class="scroll-to-top" type="button" aria-label="Scroll to top">↑</button>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#top">OC-GS</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#teaser">Teaser</a>
+        <a href="#motivation">Motivation</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#results">Results</a>
+        <a href="#ablation">Ablation</a>
+        <a href="#overhead">Overhead</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Anonymous ACM Multimedia 2026 Submission</p>
+          <h1>OC-GS: Object-Centric Representation-Demand Alignment for Immersive 3D Gaussian Streaming</h1>
+          <p class="hero-lead">
+            OC-GS treats immersive streaming as a representation-demand alignment problem. Instead of transmitting spatially coupled chunks, it exposes semantic objects as executable units and couples prediction with Lyapunov-governed control to recover attended regions faster and with far less redundant transfer.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button--primary" href="static/pdf/main.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+            <a class="button button--secondary" href="static/pdf/supplementary.pdf" target="_blank" rel="noopener noreferrer">Supplementary</a>
+            <span class="button button--ghost" aria-disabled="true">Code release pending</span>
+          </div>
+
+          <div class="metric-strip" aria-label="Key metrics">
+            <article class="metric-card">
+              <div class="metric-label">Recovery latency</div>
+              <div class="metric-value">72-78 ms</div>
+              <div class="metric-note">versus 139-192 ms for the strongest baseline</div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-label">Refetch ratio</div>
+              <div class="metric-value">0.8%-2.3%</div>
+              <div class="metric-note">versus 5.4%-9.4% under spatial-first delivery</div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-label">Semantic side payload</div>
+              <div class="metric-value">6.2 MB + 64 KB</div>
+              <div class="metric-note">compressed from a 12.4 MB sparse representation</div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-label">Online predictor</div>
+              <div class="metric-value">&lt; 10 ms</div>
+              <div class="metric-note">lightweight enough for a 100 ms control epoch</div>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual" id="teaser">
+          <div class="compare-board">
+            <article class="compare-card compare-card--baseline">
+              <div class="compare-media compare-media--left">
+                <span class="compare-badge compare-badge--baseline">Traditional Spatial</span>
+                <span class="compare-tag compare-tag--baseline">Waste tied to target bytes</span>
+              </div>
+              <p class="compare-copy">Spatial chunks entangle the attended object with surrounding background, so recovery spends bandwidth on collateral context before the target sharpens.</p>
+            </article>
+
+            <article class="compare-card compare-card--ours">
+              <div class="compare-media compare-media--right">
+                <span class="compare-badge compare-badge--ours">OC-GS</span>
+                <span class="compare-tag compare-tag--ours">Object-addressable target</span>
+              </div>
+              <p class="compare-copy">OC-GS isolates the attended entity as an executable request unit, so the budget goes directly to the object that the user is likely to inspect next.</p>
+            </article>
+          </div>
+
+          <div class="telemetry-rack">
+            <article class="telemetry-card">
+              <div class="telemetry-head">
+                <span>Recovery Latency</span>
+                <span class="telemetry-kicker">live replay</span>
+              </div>
+              <div class="duo-metric">
+                <div class="duo-row">
+                  <span class="duo-label">Baseline</span>
+                  <span class="duo-value duo-value--baseline" data-series="192 ms,184 ms,168 ms">192 ms</span>
+                </div>
+                <div class="duo-row">
+                  <span class="duo-label">OC-GS</span>
+                  <span class="duo-value duo-value--ours" data-series="78 ms,74 ms,72 ms">78 ms</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="telemetry-card">
+              <div class="telemetry-head">
+                <span>Refetch Pressure</span>
+                <span class="telemetry-kicker">session average</span>
+              </div>
+              <div class="pressure-block">
+                <div class="pressure-row">
+                  <span class="pressure-label">Spatial-first</span>
+                  <div class="pressure-bar"><span class="pressure-fill pressure-fill--baseline" style="--fill: 82%;"></span></div>
+                  <span class="pressure-value">5.4-9.4%</span>
+                </div>
+                <div class="pressure-row">
+                  <span class="pressure-label">OC-GS</span>
+                  <div class="pressure-bar"><span class="pressure-fill pressure-fill--ours" style="--fill: 24%;"></span></div>
+                  <span class="pressure-value">0.8-2.3%</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="telemetry-card telemetry-card--wave">
+              <div class="telemetry-head">
+                <span>Bandwidth / Scheduler State</span>
+                <span class="telemetry-kicker">control trace</span>
+              </div>
+              <div class="sparkline-group">
+                <div class="sparkline-row">
+                  <span class="sparkline-label">Traditional</span>
+                  <svg class="sparkline sparkline--baseline" viewBox="0 0 220 52" aria-hidden="true">
+                    <polyline points="0,34 18,14 36,38 54,10 72,32 90,20 108,42 126,8 144,36 162,16 180,44 198,12 220,28"></polyline>
+                  </svg>
+                </div>
+                <div class="sparkline-row">
+                  <span class="sparkline-label">OC-GS</span>
+                  <svg class="sparkline sparkline--ours" viewBox="0 0 220 52" aria-hidden="true">
+                    <polyline points="0,28 18,22 36,26 54,18 72,24 90,16 108,23 126,15 144,21 162,18 180,22 198,17 220,19"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="motivation">
+      <div class="container section-header">
+        <p class="section-kicker">Motivation</p>
+        <h2>Attention is object-centric, not chunk-centric</h2>
+        <p>
+          The core mismatch in immersive streaming is structural: users attend to semantic objects, while traditional systems transmit spatially coupled regions. OC-GS starts by fixing that mismatch at the request-unit level.
+        </p>
+      </div>
+
+      <div class="container motivation-grid">
+        <article class="attention-panel">
+          <div class="attention-stage" role="img" aria-label="Attention heatmap over a scene with highlighted object masks">
+            <img src="static/images/attention_scene.png" alt="Scene with highlighted attended object">
+            <span class="attention-spot attention-spot--primary"></span>
+            <span class="attention-spot attention-spot--secondary"></span>
+            <span class="attention-spot attention-spot--tertiary"></span>
+            <span class="mask-chip mask-chip--primary">Phone</span>
+            <span class="mask-chip mask-chip--secondary">Notebook</span>
+            <span class="mask-chip mask-chip--tertiary">Tissue box</span>
+          </div>
+
+          <div class="attention-stats">
+            <div class="attention-stat">
+              <span class="attention-stat__label">Top-3 attended objects</span>
+              <span class="attention-stat__value">39.1%</span>
+            </div>
+            <div class="attention-stat">
+              <span class="attention-stat__label">Uniform baseline</span>
+              <span class="attention-stat__value">18.75%</span>
+            </div>
+            <p class="attention-note">
+              The homepage view mirrors the paper's argument: gaze concentrates on a few objects, so object-addressable transport matches actual demand far better than uniform or purely spatial slicing.
+            </p>
+          </div>
+        </article>
+
+        <article class="figure-card">
+          <img src="static/images/motivation_controls.png" alt="Motivation control figure showing top-k attention concentration, ratio to uniform, consistency, and mask sensitivity">
+          <p class="figure-note">
+            Four diagnostic views support the same claim: concentration over top objects is consistently above uniform, the effect is binocularly stable, and the conclusion is robust to mask-threshold changes.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="architecture">
+      <div class="container section-header">
+        <p class="section-kicker">Two-Stage System</p>
+        <h2>Offline objectization, online stability</h2>
+        <p>
+          OC-GS is a coordinated stack rather than a single predictor. The offline stage turns frozen 3DGS scenes into object-addressable assets, and the online stage consumes exactly that interface to make legal, low-churn scheduling decisions.
+        </p>
+      </div>
+
+      <div class="container stage-grid">
+        <article class="stage-card stage-card--offline">
+          <div class="stage-chip">Offline Stage</div>
+          <h3>Semantic-Saliency Co-Distillation</h3>
+          <p>Attach object-assignable semantics and utility to frozen 3DGS without touching geometry or appearance.</p>
+          <dl class="spec-list">
+            <div class="spec-row">
+              <dt>Teachers</dt>
+              <dd><span class="mono">SAM3</span>, <span class="mono">CLIP-ViT-L/14</span>, <span class="mono">VST++</span></dd>
+            </div>
+            <div class="spec-row">
+              <dt>Queue A</dt>
+              <dd>Macro background coverage for stable coarse scene support</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Queue B</dt>
+              <dd>Large object LoD chains for progressive object refinement</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Queue C</dt>
+              <dd>Atomic micro-object packs for fine high-value details</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Payload</dt>
+              <dd><span class="mono">12.4 MB + 64 KB</span> sparse side info, then packed to <span class="mono">6.2 MB + 64 KB</span> for transmission</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="stage-card stage-card--online">
+          <div class="stage-chip">Online Stage</div>
+          <h3>Lyapunov-Governed Delivery</h3>
+          <p>Fuse geometry, intent, and runtime state into object demand, then convert demand into feasible low-churn actions.</p>
+          <dl class="spec-list">
+            <div class="spec-row">
+              <dt>Predictor</dt>
+              <dd>Physical, visual, and intent branches estimate object-level demand on the exported interface</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Control state</dt>
+              <dd>Virtual queues <span class="mono">Z<sub>B</sub></span> and <span class="mono">Z<sub>C</sub></span> penalize bandwidth and decode oversubscription</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Scheduler</dt>
+              <dd>Rank-and-feasibility selection every <span class="mono">100 ms</span> with dependency legality and one-epoch pinning</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Outcome</dt>
+              <dd>Faster attended recovery, lower refetch, and substantially lower long-session churn</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+
+      <div class="container overview-frame">
+        <img src="static/images/overview.png" alt="OC-GS overview showing semantic-saliency distillation, hybrid scene assets, and online scheduling">
+      </div>
+    </section>
+
+    <section class="section section--alt" id="results">
+      <div class="container section-header">
+        <p class="section-kicker">Benchmark Results</p>
+        <h2>Faster recovery, lower refetch, better attended quality</h2>
+        <p>
+          The strongest evidence for OC-GS is not one number. It is the consistency of the gain across Mip-NeRF360, ScanNet++, and Replica: when demand is represented in object space, the system spends less bandwidth on collateral bytes and stabilizes better over time.
+        </p>
+      </div>
+
+      <div class="container result-callouts">
+        <article class="callout-card">
+          <span class="callout-label">Recovery improvement</span>
+          <strong>139-192 ms → 72-78 ms</strong>
+          <p>OC-GS halves the wall-clock recovery time relative to A3FR while improving Fov-PSNR.</p>
+        </article>
+        <article class="callout-card">
+          <span class="callout-label">Refetch suppression</span>
+          <strong>5.4%-9.4% → 0.8%-2.3%</strong>
+          <p>Object-level request units eliminate much of the revisit churn that spatial units keep paying for.</p>
+        </article>
+        <article class="callout-card">
+          <span class="callout-label">Quality gain</span>
+          <strong>+0.87 to +1.77 dB</strong>
+          <p>OC-GS remains ahead on attended Fov-PSNR while also reducing redundant transfer and recovery delay.</p>
+        </article>
+      </div>
+
+      <div class="container benchmark-layout">
+        <article class="table-card">
+          <div class="card-head">
+            <h3>Main comparison</h3>
+            <span class="table-tag">Table 2</span>
+          </div>
+          <div class="table-scroll">
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th rowspan="2">Method</th>
+                  <th colspan="4">Mip-NeRF360</th>
+                  <th colspan="4">ScanNet++</th>
+                  <th colspan="4">Replica</th>
+                </tr>
+                <tr>
+                  <th>Fov-PSNR ↑</th>
+                  <th>SSIM ↑</th>
+                  <th>Recovery ↓</th>
+                  <th>Refetch ↓</th>
+                  <th>Fov-PSNR ↑</th>
+                  <th>SSIM ↑</th>
+                  <th>Recovery ↓</th>
+                  <th>Refetch ↓</th>
+                  <th>Fov-PSNR ↑</th>
+                  <th>SSIM ↑</th>
+                  <th>Recovery ↓</th>
+                  <th>Refetch ↓</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Original 3DGS</th>
+                  <td>35.82</td>
+                  <td>0.982</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
+                  <td>38.44</td>
+                  <td>0.986</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
+                  <td>37.18</td>
+                  <td>0.984</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <th>L3GS</th>
+                  <td>30.15</td>
+                  <td>0.895</td>
+                  <td>168</td>
+                  <td>8.4%</td>
+                  <td>32.68</td>
+                  <td>0.921</td>
+                  <td>161</td>
+                  <td>12.7%</td>
+                  <td>31.27</td>
+                  <td>0.907</td>
+                  <td>171</td>
+                  <td>13.5%</td>
+                </tr>
+                <tr>
+                  <th>LapisGS</th>
+                  <td>31.50</td>
+                  <td>0.910</td>
+                  <td>136</td>
+                  <td>4.2%</td>
+                  <td>34.23</td>
+                  <td>0.961</td>
+                  <td>138</td>
+                  <td>7.3%</td>
+                  <td>32.91</td>
+                  <td>0.937</td>
+                  <td>147</td>
+                  <td>7.9%</td>
+                </tr>
+                <tr>
+                  <th>A3FR</th>
+                  <td>32.85</td>
+                  <td>0.925</td>
+                  <td>192</td>
+                  <td>5.4%</td>
+                  <td>35.68</td>
+                  <td>0.972</td>
+                  <td>184</td>
+                  <td>8.8%</td>
+                  <td>34.18</td>
+                  <td>0.946</td>
+                  <td>139</td>
+                  <td>9.4%</td>
+                </tr>
+                <tr class="row-highlight">
+                  <th>OC-GS</th>
+                  <td>33.72</td>
+                  <td>0.948</td>
+                  <td>74</td>
+                  <td>0.8%</td>
+                  <td>37.45</td>
+                  <td>0.981</td>
+                  <td>72</td>
+                  <td>1.9%</td>
+                  <td>35.49</td>
+                  <td>0.963</td>
+                  <td>78</td>
+                  <td>2.3%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <div class="chart-grid">
+          <article class="chart-card">
+            <img src="static/images/Bandwidth_Robustness.png" alt="Bandwidth robustness comparison">
+            <p>OC-GS preserves its advantage across bandwidth regimes instead of collapsing once the budget tightens.</p>
+          </article>
+          <article class="chart-card">
+            <img src="static/images/FDE.png" alt="FDE comparison">
+            <p>The predictor estimates demand in object space, which improves where the system spends the next transmission step.</p>
+          </article>
+          <article class="chart-card">
+            <img src="static/images/Recovery_Rate.png" alt="Recovery rate comparison">
+            <p>Event-aligned recovery curves show that OC-GS reaches usable attended quality much earlier after a gaze shift.</p>
+          </article>
+          <article class="chart-card">
+            <img src="static/images/Temporal_Stability.png" alt="Temporal stability comparison">
+            <p>Lyapunov-governed scheduling reduces long-session churn rather than merely winning isolated recovery events.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="qualitative">
+      <div class="container section-header">
+        <p class="section-kicker">Qualitative Evidence</p>
+        <h2>Event-aligned recovery under the same budget</h2>
+        <p>
+          The main qualitative view fixes the same event, the same budget, and the same 50 ms snapshot after a gaze or saccade shift. That alignment makes the visual comparison about early recovery quality rather than eventual convergence.
+        </p>
+      </div>
+
+      <div class="container qualitative-layout">
+        <article class="qualitative-copy">
+          <h3>Why this comparison matters</h3>
+          <ul class="bullet-list">
+            <li>Every method is measured at the same wall-clock moment after the attentional event.</li>
+            <li>OC-GS recovers clean object boundaries earlier because it can request object-level units directly.</li>
+            <li>The gain is strongest on small, high-saliency structures where spatial coupling wastes transfer budget.</li>
+            <li>The first panel keeps the exact main-paper setting, while the second expands the comparison to more scenes and method pairs under the same early-recovery protocol.</li>
+          </ul>
+        </article>
+
+        <div class="qualitative-gallery">
+          <article class="qualitative-figure">
+            <img src="static/images/Qualitative.png" alt="Main qualitative comparison across methods at a fixed 50 milliseconds after a gaze or saccade shift">
+            <p class="figure-note">Main-paper qualitative snapshot: the same event, the same budget, and the same fixed 50 ms view after gaze or saccade shift.</p>
+          </article>
+
+          <article class="qualitative-figure">
+            <img src="static/images/more_Qualitative.png" alt="Additional qualitative comparison with more scenes and method pairs under the same early-recovery setting">
+            <p class="figure-note">Expanded qualitative comparison under the same early-recovery setting, adding more scenes and method pairs without changing the event-aligned protocol.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="ablation">
+      <div class="container section-header">
+        <p class="section-kicker">Ablation Ladder</p>
+        <h2>Each module fixes a different failure mode</h2>
+        <p>
+          The ablation is a systems necessity ladder, not a cosmetic drop-one study. It shows that better prediction alone is insufficient: stable long-horizon behavior appears only once object units, legality, and Lyapunov-style control all operate in the same loop.
+        </p>
+      </div>
+
+      <div class="container ablation-layout">
+        <article class="table-card">
+          <div class="card-head">
+            <h3>Necessity ladder</h3>
+            <span class="table-tag">Table 3</span>
+          </div>
+          <div class="table-scroll">
+            <table class="ablation-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Fov-PSNR ↑</th>
+                  <th>Temp. Instab. ↓</th>
+                  <th>Recovery ↓</th>
+                  <th>Refetch ↓</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>(a) Spatial</th>
+                  <td>30.45</td>
+                  <td>1.84</td>
+                  <td>320</td>
+                  <td>6.2%</td>
+                </tr>
+                <tr>
+                  <th>(b) Obj-gran</th>
+                  <td>32.10</td>
+                  <td>1.36</td>
+                  <td>285</td>
+                  <td>4.8%</td>
+                </tr>
+                <tr>
+                  <th>(c) Geom-anchor</th>
+                  <td>32.74</td>
+                  <td>1.18</td>
+                  <td>162</td>
+                  <td>4.4%</td>
+                </tr>
+                <tr>
+                  <th>(d) Full-pred</th>
+                  <td>33.50</td>
+                  <td>0.96</td>
+                  <td>34.2</td>
+                  <td>5.1%</td>
+                </tr>
+                <tr>
+                  <th>(e) Seg-Prio</th>
+                  <td>32.62</td>
+                  <td>1.14</td>
+                  <td>128</td>
+                  <td>3.3%</td>
+                </tr>
+                <tr>
+                  <th>(f) OL+DepChk</th>
+                  <td>32.79</td>
+                  <td>1.06</td>
+                  <td>112</td>
+                  <td>2.6%</td>
+                </tr>
+                <tr class="row-highlight">
+                  <th>(g) OC-GS</th>
+                  <td>33.72</td>
+                  <td>0.51</td>
+                  <td>74</td>
+                  <td>0.8%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <div class="insight-stack">
+          <article class="insight-card">
+            <span class="insight-chip">Request unit</span>
+            <h3>Spatial chunks are the first bottleneck</h3>
+            <p>Switching from spatial fragments to object packages already improves quality and reduces delay, because the request unit finally matches semantic demand.</p>
+          </article>
+          <article class="insight-card">
+            <span class="insight-chip">Predictor alone</span>
+            <h3>Fast single-event recovery is not enough</h3>
+            <p><span class="mono">Full-pred</span> reaches the best event-wise recovery time, but still suffers 5.1% refetch and nearly double the instability of OC-GS.</p>
+          </article>
+          <article class="insight-card">
+            <span class="insight-chip">Closed loop</span>
+            <h3>The win comes from the full executable loop</h3>
+            <p>Only the combination of object-addressable actions, dependency legality, and Lyapunov control converts prediction into sustainable long-session behavior.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overhead">
+      <div class="container section-header">
+        <p class="section-kicker">Deployment and Cost</p>
+        <h2>Light enough for practice, explicit enough for systems reviewers</h2>
+        <p>
+          OC-GS pays a one-time offline objectization cost, then keeps the online loop lightweight. The homepage reports the same deployment numbers as the paper so the engineering trade-off stays explicit.
+        </p>
+      </div>
+
+      <div class="container overhead-grid">
+        <article class="terminal-card">
+          <div class="terminal-top">
+            <span></span><span></span><span></span>
+          </div>
+          <pre>offline_distillation_per_scene = ~3 hours   # RTX 3090
+online_predictor_latency     = &lt; 10 ms
+scheduler_period             = 100 ms
+semantic_side_payload        = 6.2 MB + 64 KB
+dense_semantic_equivalent    = ~244 MB
+cold_start_added@100Mbps     = 0.6 s
+cold_start_added@20Mbps      = 2.7 s</pre>
+        </article>
+
+        <article class="payload-card">
+          <h3>Payload accounting</h3>
+          <div class="payload-row">
+            <span class="payload-label">Dense semantic equivalent</span>
+            <div class="payload-bar"><span class="payload-fill payload-fill--dense" style="--fill: 100%;"></span></div>
+            <span class="payload-value">~244 MB</span>
+          </div>
+          <div class="payload-row">
+            <span class="payload-label">Sparse distilled representation</span>
+            <div class="payload-bar"><span class="payload-fill payload-fill--sparse" style="--fill: 28%;"></span></div>
+            <span class="payload-value">12.4 MB + 64 KB</span>
+          </div>
+          <div class="payload-row">
+            <span class="payload-label">Packed transmitted side channel</span>
+            <div class="payload-bar"><span class="payload-fill payload-fill--packed" style="--fill: 18%;"></span></div>
+            <span class="payload-value">6.2 MB + 64 KB</span>
+          </div>
+          <p class="figure-note">
+            OC-GS first compresses semantics into a sparse representation, then applies a conventional streaming-style packing step to halve the transmitted side channel again before deployment.
+          </p>
+        </article>
+
+        <div class="deployment-stack">
+          <article class="deployment-card">
+            <span class="deployment-kicker">Offline</span>
+            <h3>Scene-specific, user-amortized</h3>
+            <p>Objectization is paid once per scene, then reused across participants and sessions.</p>
+          </article>
+          <article class="deployment-card">
+            <span class="deployment-kicker">Online</span>
+            <h3>Runtime fits the control budget</h3>
+            <p>The predictor stays below 10 ms, leaving headroom inside the 100 ms scheduling epoch.</p>
+          </article>
+          <article class="deployment-card">
+            <span class="deployment-kicker">Fairness</span>
+            <h3>Baseline comparison is native-first</h3>
+            <p>L3GS and LapisGS keep their own hierarchy and controller logic; A3FR receives only a thin transport adapter.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>OC-GS</strong>
+        <p>Object-centric immersive 3D Gaussian streaming with stability-governed delivery.</p>
+      </div>
+      <div class="footer-meta">
+        <span>Anonymous review page</span>
+        <span>Built from paper figures, tables, and system metrics</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="static/js/index.js"></script>
+</body>
 </html>
