@@ -12,6 +12,23 @@
   <meta property="og:image" content="static/images/teaser.png">
   <meta property="og:type" content="website">
   <title>OC-GS | Object-Centric Gaussian Streaming</title>
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var last = path.substring(path.lastIndexOf("/") + 1);
+      var basePath;
+
+      if (path.endsWith("/")) {
+        basePath = path;
+      } else if (last && last.indexOf(".") !== -1) {
+        basePath = path.slice(0, path.lastIndexOf("/") + 1);
+      } else {
+        basePath = path + "/";
+      }
+
+      document.write('<base href="' + basePath.replace(/"/g, "&quot;") + '">');
+    })();
+  </script>
   <link rel="icon" type="image/png" href="static/images/icon.png">
   <link rel="apple-touch-icon" href="static/images/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
