@@ -1119,8 +1119,7 @@ thead th {
   .metric-strip,
   .compare-board,
   .attention-stats,
-  .chart-grid,
-  .motivation-quad-grid {
+  .chart-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1164,6 +1163,10 @@ thead th {
 
   .hero-actions {
     display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .motivation-quad-grid {
     grid-template-columns: 1fr;
   }
 
