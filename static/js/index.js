@@ -18,26 +18,6 @@ function setupScrollToTop() {
   updateScrollButton();
 }
 
-function setupCyclingMetrics() {
-  const nodes = document.querySelectorAll("[data-series]");
-  nodes.forEach((node) => {
-    const frames = node.dataset.series
-      .split(",")
-      .map((item) => item.trim())
-      .filter(Boolean);
-
-    if (frames.length < 2) return;
-
-    let index = 0;
-    node.textContent = frames[index];
-
-    window.setInterval(() => {
-      index = (index + 1) % frames.length;
-      node.textContent = frames[index];
-    }, 1600);
-  });
-}
-
 function setupSmoothAnchorScroll() {
   const links = document.querySelectorAll('a[href^="#"]');
   links.forEach((link) => {
@@ -54,6 +34,5 @@ function setupSmoothAnchorScroll() {
 
 document.addEventListener("DOMContentLoaded", () => {
   setupScrollToTop();
-  setupCyclingMetrics();
   setupSmoothAnchorScroll();
 });

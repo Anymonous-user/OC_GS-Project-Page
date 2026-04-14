@@ -944,9 +944,9 @@ thead th {
 
 .payload-row {
   display: grid;
-  grid-template-columns: 1.2fr 1fr auto;
+  grid-template-columns: minmax(180px, 1.2fr) minmax(120px, 1fr) 152px;
   gap: 12px;
-  align-items: center;
+  align-items: start;
   margin-top: 14px;
 }
 
@@ -969,6 +969,14 @@ thead th {
 
 .payload-value {
   font-size: 0.82rem;
+  justify-self: start;
+  align-self: start;
+  white-space: nowrap;
+}
+
+.payload-bar {
+  align-self: start;
+  margin-top: 0.22rem;
 }
 
 .deployment-stack {
